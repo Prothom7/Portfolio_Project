@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="navigation.css" />
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="projects.css" />
+  <link rel="stylesheet" href="aboutme.css" /> <!-- Added About Me styles -->
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -24,6 +25,13 @@
       ?>
     </section>
 
+    <!-- About Me Section -->
+    <section id="about-me">
+      <?php
+        echo file_get_contents('aboutme.html');
+      ?>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects">
       <?php
@@ -34,5 +42,6 @@
 
   <!-- JavaScript -->
   <script src="projects.js"></script>
+  <script src="aboutme.js"></script> <!-- Added About Me script -->
 </body>
 </html>
