@@ -1,19 +1,28 @@
+/* Fullscreen About Section */
 .about-section {
   padding: 2rem;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
+/* Container for content */
 .about-container {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1200px;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Responsive layout */
 }
 
+/* Profile Image Styling */
 .profile-photo {
   width: 200px;
   height: 200px;
@@ -22,6 +31,7 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Text Styling */
 .about-text h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -32,4 +42,5 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
+  max-width: 600px;
 }
