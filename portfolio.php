@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="navigation.css" />
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="projects.css" />
-  <link rel="stylesheet" href="aboutme.css" /> <!-- Added About Me styles -->
+  <link rel="stylesheet" href="aboutme.css" />
+  <link rel="stylesheet" href="contact.css" /> <!-- Added Contact styles -->
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -38,10 +39,18 @@
         echo file_get_contents('projects.html');
       ?>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <?php
+        echo file_get_contents('contact.html');
+      ?>
+    </section>
   </main>
 
   <!-- JavaScript -->
   <script src="projects.js"></script>
-  <script src="aboutme.js"></script> <!-- Added About Me script -->
+  <script src="aboutme.js"></script>
+  <script src="contact.js"></script> <!-- Added Contact script -->
 </body>
 </html>
