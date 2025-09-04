@@ -5,11 +5,27 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Simulate form submission
+    const formData = new FormData(form);
     status.textContent = "Sending...";
-    setTimeout(() => {
-      status.textContent = "Message sent successfully!";
-      form.reset();
-    }, 1500);
+
+    fetch("contact.php", {
+      method: "POST",
+      body: formData
+    })
+      .then(response => response.text())
+      .then(result => {
+        if (result.trim() === "success") {
+          status.textContent = "Message sent successfully!";
+          form.reset();
+        } else if (result.trim() === "invalid") {
+          status.textContent = "Please fill in all fields.";
+        } else {
+          status.textContent = "Something went wrong. Try again.";
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        status.textContent = "Server error. Please try later.";
+      });
   });
 });
