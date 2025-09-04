@@ -19,16 +19,24 @@
   max-width: 1200px;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* Responsive layout */
+  flex-wrap: wrap;
 }
 
-/* Profile Image Styling */
+/* Profile Image Styling with Hover Effects */
 .profile-photo {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.profile-photo:hover {
+  transform: scale(1.15);
+  filter: blur(2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 /* Text Styling */

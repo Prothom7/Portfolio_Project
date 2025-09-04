@@ -10,47 +10,38 @@
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="projects.css" />
   <link rel="stylesheet" href="aboutme.css" />
-  <link rel="stylesheet" href="contact.css" /> <!-- Added Contact styles -->
+  <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
   <!-- Navigation Bar -->
-  <?php
-    echo file_get_contents('navigation.html');
-  ?>
+  <?php echo file_get_contents('navigation.html'); ?>
 
   <main>
     <!-- Home Section -->
     <section id="home">
-      <?php
-        echo file_get_contents('home.html');
-      ?>
+      <?php echo file_get_contents('home.html'); ?>
     </section>
 
     <!-- About Me Section -->
     <section id="about-me">
-      <?php
-        echo file_get_contents('aboutme.html');
-      ?>
+      <?php echo file_get_contents('aboutme.html'); ?>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-      <?php
-        echo file_get_contents('projects.html');
-      ?>
+      <?php echo file_get_contents('projects.html'); ?>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-      <?php
-        echo file_get_contents('contact.html');
-      ?>
+      <?php echo file_get_contents('contact.html'); ?>
     </section>
   </main>
 
   <!-- JavaScript -->
+  <script src="home.js"></script>         <!-- 👈 Added for image effects -->
   <script src="projects.js"></script>
   <script src="aboutme.js"></script>
-  <script src="contact.js"></script> <!-- Added Contact script -->
+  <script src="contact.js"></script>
 </body>
 </html>
