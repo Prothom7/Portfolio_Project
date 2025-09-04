@@ -24,8 +24,8 @@
 
 /* Profile Image Styling */
 .profile-photo {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);

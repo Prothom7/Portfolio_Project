@@ -1,17 +1,35 @@
-.skills-section {
-  padding: 2rem;
-  background-color: #fff;
+/* Make the #about-me section full viewport size */
+#about-me {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto; /* Scroll if content too tall */
+  background-color: #fff; /* Or your preferred bg */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
+/* Your existing skills-section fills the full parent */
+.skills-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Responsive */
+}
+
+/* Container inside skills-section */
 .skills-container {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   max-width: 900px;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .profile-photo {
@@ -20,6 +38,8 @@
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;       /* ensures image acts like a block element */
+  margin: 0 auto;       /* horizontally centers the image */
 }
 
 .skills-text h2 {
@@ -77,7 +97,7 @@
 
 .fill {
   height: 100%;
-  width: 0;
+  width: 0; /* Will be animated */
   background: linear-gradient(to right, #4facfe, #00f2fe);
   transition: width 2s ease;
 }
