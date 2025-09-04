@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  overflow-y: auto;
 }
 
 .projects-container {
@@ -19,6 +19,9 @@
 }
 
 .project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -28,6 +31,7 @@
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .project-image {
