@@ -1,0 +1,142 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-panel-container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.email-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.email-section li {
+  background: #e8f0fe;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.project-form input,
+.project-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.project-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-group button {
+  padding: 0.6rem 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background-color: #388e3c;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-table th,
+.project-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.project-table img {
+  max-width: 50px;
+  border-radius: 4px;
+}
+
+.message-viewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.message-viewer button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-viewer button:hover {
+  background-color: #005fa3;
+}
+
+.message-card {
+  max-width: 500px;
+  padding: 1rem;
+  background-color: #f9f9ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.message-card img {
+  max-width: 100px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.message-card h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.message-card p {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.counter {
+  font-size: 0
