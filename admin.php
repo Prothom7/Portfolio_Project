@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// Handle login form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST['username'];
   $password = $_POST['password'];
@@ -19,6 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($result->num_rows === 1) {
     $_SESSION['admin_user'] = $username;
+
+    // ✅ Set cookie to remember username for 7 days
+    setcookie("remembered_username", $username, time() + (7 * 24 * 60 * 60), "/");
+
     header("Location: adminpanel.php");
     exit();
   } else {
@@ -42,7 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="admin-login-container">
     <h2>🔐 Admin Login</h2>
     <form method="POST" class="admin-form">
-      <input type="text" name="username" placeholder="Username" required />
+      <input type="text" name="username" placeholder="Username"
+        value="<?php echo isset($_COOKIE['remembered_username']) ? htmlspecialchars($_COOKIE['remembered_username']) : ''; ?>" required />
       <input type="password" name="password" placeholder="Password" required />
       <button type="submit">Login</button>
     </form>
